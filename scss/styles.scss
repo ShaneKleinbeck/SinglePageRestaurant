@@ -1,0 +1,48 @@
+/* -- Navbar
+------------------------------*/
+:root {
+  --main-height: 100vh;
+  --main-width: 100vw;
+  --no-decoration: none;
+}
+
+#wrapper1 {
+  height: var(--main-height);
+  width: var(--main-width);
+  background: url(/public/images/section1-1.jpg) center / cover;
+  font-family: 'Arima Madurai', serif;
+}
+
+#wrapper1 .container-fluid {
+  padding-top: 25vh;
+  text-align: center;
+  float: right;
+  padding-right: 6vw;
+
+  .banner-header {
+    padding: 0 0 1.5em 0;
+    .no-decoration {
+      text-decoration: var(--no-decoration);
+    }
+    li:first-child {
+      font-size: 5.5em;
+    }
+    li:nth-child(2) {
+      font-size: 1em;
+    }
+  }
+  .banner-content {
+    padding: 1.5em 0 1.5em 0;
+    li {
+      font-size: 2.5em;
+    }
+  }
+  li a {
+    color: white;
+  }
+  .nav-svg {
+    height: 5em;
+    color: white;
+  }
+
+}
