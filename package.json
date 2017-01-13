@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/ShaneKleinbeck/SinglePageRestaurant#readme",
   "devDependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
   }
 }
