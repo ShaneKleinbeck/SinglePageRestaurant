@@ -3,7 +3,8 @@
 :root {
   --main-height: 100vh;
   --main-width: 100vw;
-  --no-decoration: none; }
+  --no-decoration: none;
+  --transition-height: 15vh; }
 
 .hvr-grow-shadow {
   display: inline-block;
@@ -32,12 +33,12 @@
 
 #wrapper1 .container-fluid {
   text-align: center;
-  padding-top: 5vh; }
+  padding-top: 5vh;
+  background: -webkit-gradient(linear, right top, left top, color-stop(0%, rgba(0, 0, 0, 0.65)), color-stop(100%, transparent));
+  height: 100vh; }
   @media only screen and (min-width: 768px) {
     #wrapper1 .container-fluid {
       width: 30em;
-      height: 100vh;
-      background: -webkit-gradient(linear, right top, left top, color-stop(0%, rgba(0, 0, 0, 0.65)), color-stop(100%, transparent));
       padding-top: 10vh;
       text-align: center;
       float: right;
@@ -82,5 +83,10 @@
         padding-top: 0; } }
 
 #about {
-  background-color: #ffffff;
-  height: var(--main-height); }
+  background-color: #ffffff; }
+  #about #awards {
+    height: var(--transition-height); }
+    #about #awards .mustacheAward {
+      height: var(--transition-height);
+      background-color: blue;
+      text-align: center; }

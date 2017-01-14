@@ -4,6 +4,7 @@
   --main-height: 100vh;
   --main-width: 100vw;
   --no-decoration: none;
+  --transition-height: 15vh;
 }
 
 // Hover Grow
@@ -39,11 +40,11 @@
 #wrapper1 .container-fluid {
   text-align: center;
   padding-top: 5vh;
+  // Thanks To Curedatpearl.com for gradient design
+  background: -webkit-gradient(linear, right top, left top, color-stop(0%, rgba(0, 0, 0, 0.65)), color-stop(100%, rgba(0, 0, 0, 0)));
+  height: 100vh;
   @media only screen and (min-width : 768px) {
     width: 30em;
-    height: 100vh;
-    // Thanks To Curedatpearl.com for gradient design
-    background: -webkit-gradient(linear, right top, left top, color-stop(0%, rgba(0, 0, 0, 0.65)), color-stop(100%, rgba(0, 0, 0, 0)));
     padding-top: 10vh;
     text-align: center;
     float: right;
@@ -87,5 +88,12 @@
 // About
 #about {
   background-color: #ffffff;
-  height: var(--main-height);
+  #awards {
+    height: var(--transition-height);
+    .mustacheAward {
+      height: var(--transition-height);
+      background-color: blue;
+      text-align: center;
+    }
+  }
 }
