@@ -6,43 +6,86 @@
   --no-decoration: none;
 }
 
+// Hover Grow
+.hvr-grow-shadow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
+}
+.hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+// Banner
 #wrapper1 {
   height: var(--main-height);
   width: var(--main-width);
-  background: url(/public/images/section1-1.jpg) center / cover;
-  font-family: 'Arima Madurai', serif;
+  background: url(/public/images/section1-4.jpg) center / cover;
+  font-family: 'Playfair Display', serif;
+
 }
 
 #wrapper1 .container-fluid {
-  padding-top: 25vh;
   text-align: center;
-  float: right;
-  padding-right: 6vw;
-
+  padding-top: 5vh;
+  @media only screen and (min-width : 768px) {
+    width: 30em;
+    height: 100vh;
+    // Thanks To Curedatpearl.com for gradient design
+    background: -webkit-gradient(linear, right top, left top, color-stop(0%, rgba(0, 0, 0, 0.65)), color-stop(100%, rgba(0, 0, 0, 0)));
+    padding-top: 10vh;
+    text-align: center;
+    float: right;
+    padding-right: 1vw; }
   .banner-header {
-    padding: 0 0 1.5em 0;
+    padding: 0 0 2em 0;
     .no-decoration {
-      text-decoration: var(--no-decoration);
-    }
+      text-decoration: var(--no-decoration); }
     li:first-child {
-      font-size: 5.5em;
-    }
+      font-size: 4em;
+      @media only screen and (min-width : 768px) {
+        font-size: 4em; } }
     li:nth-child(2) {
-      font-size: 1em;
-    }
-  }
+      font-size: 1em; } }
   .banner-content {
-    padding: 1.5em 0 1.5em 0;
-    li {
-      font-size: 2.5em;
-    }
-  }
+    display: none;
+    padding: 2em 0 2em 0;
+    @media only screen and (min-width : 768px) {
+      display: block;
+      .no-decoration {
+        text-decoration: var(--no-decoration); }
+      li {
+        font-size: 2em;
+        padding-top: .7em; } } }
+  .maps-address {
+    .no-decoration {
+      text-decoration: var(--no-decoration); }
+    @media only screen and (min-width : 768px) {
+      padding-top: 3em; } }
   li a {
     color: white;
-  }
+    line-height: 2em; }
   .nav-svg {
-    height: 5em;
+    padding-top: 60vh;
+    height: 1em;
+    width: 10em;
     color: white;
-  }
+    @media only screen and (min-width : 768px) {
+      padding-top: 0; } } }
 
+// About
+#about {
+  background-color: #ffffff;
+  height: var(--main-height);
 }
