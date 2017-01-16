@@ -7,6 +7,40 @@
   --transition-height: 15vh;
 }
 
+/* Underline From Center */
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background: white;
+  height: 3px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
+}
+
 // Hover Grow
 .hvr-grow-shadow {
   display: inline-block;
@@ -23,7 +57,6 @@
   transition-property: box-shadow, transform;
 }
 .hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
-  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
 }
@@ -33,67 +66,150 @@
   height: var(--main-height);
   width: var(--main-width);
   background: url(/public/images/section1-4.jpg) center / cover;
-  font-family: 'Playfair Display', serif;
-
+  font-family: 'Fredericka the Great', cursive;
 }
 
 #wrapper1 .container-fluid {
   text-align: center;
-  padding-top: 5vh;
   // Thanks To Curedatpearl.com for gradient design
   background: -webkit-gradient(linear, right top, left top, color-stop(0%, rgba(0, 0, 0, 0.65)), color-stop(100%, rgba(0, 0, 0, 0)));
   height: 100vh;
   @media only screen and (min-width : 768px) {
     width: 30em;
-    padding-top: 10vh;
+    padding: 5vh 0 0 0;
     text-align: center;
-    float: right;
-    padding-right: 1vw; }
+    float: right; }
   .banner-header {
-    padding: 0 0 2em 0;
     .no-decoration {
       text-decoration: var(--no-decoration); }
     li:first-child {
       font-size: 4em;
       @media only screen and (min-width : 768px) {
-        font-size: 4em; } }
+        font-size: 6em; } }
     li:nth-child(2) {
       font-size: 1em; } }
   .banner-content {
     display: none;
-    padding: 2em 0 2em 0;
+    padding: 12vh 0 2em 0;
     @media only screen and (min-width : 768px) {
       display: block;
       .no-decoration {
         text-decoration: var(--no-decoration); }
       li {
         font-size: 2em;
-        padding-top: .7em; } } }
+        padding-top: .8em; } } }
   .maps-address {
+    padding-top: 65vh;
+    @media only screen and (min-width : 375px) and (max-width : 767px) {
+      padding-top: 75vh; }
+    @media only screen and (min-width : 768px) and (max-width : 1023px) {
+      padding-top: 15vh; }
+    @media only screen and (min-width : 1024px) and (max-width : 1199px) {
+      padding-top: 25vh; }
+    @media only screen and (min-width : 1200px) {
+      padding-top: 13vh; }
     .no-decoration {
-      text-decoration: var(--no-decoration); }
-    @media only screen and (min-width : 768px) {
-      padding-top: 3em; } }
+      text-decoration: var(--no-decoration);
+    }
+  }
   li a {
     color: white;
-    line-height: 2em; }
-  .nav-svg {
-    padding-top: 60vh;
-    height: 1em;
-    width: 10em;
-    color: white;
-    @media only screen and (min-width : 768px) {
-      padding-top: 0; } } }
+  }
+}
 
-// About
-#about {
-  background-color: #ffffff;
-  #awards {
-    height: var(--transition-height);
-    .mustacheAward {
-      height: var(--transition-height);
-      background-color: blue;
+// The restaurant
+#section1 {
+   font-family: 'Josefin Slab', serif;
+  #hours {
+    padding: 4vh 0 0 0;
+    height: 75vh;
+    @media only screen and (min-width : 321px) and (max-width : 413px) {
+      height: 65vh; }
+    @media only screen and (min-width : 414px) and (max-width : 767px) {
+      height: 60vh; }
+    @media only screen and (min-width : 768px) and (max-width : 1023px) {
+      height: 55vh; }
+    @media only screen and (min-width : 1024px) {
+      height: 45em; }
+    #hours-title {
       text-align: center;
+      font-size: 1.8em;
+      padding: 0 0 3vh 0;
+      @media only screen and (min-width : 321px) and (max-width : 413px) {
+        font-size: 2em; }
+      @media only screen and (min-width : 414px) and (max-width : 767px) {
+        font-size: 2.3em; }
+      @media only screen and (min-width : 768px) and (max-width : 1023px) {
+        font-size: 1.9em; }
+      @media only screen and (min-width : 1024px) {
+        font-size: 2.3em; } }
+    .week {
+      text-align: center;
+      .day {
+        padding-top: .4em;
+        font-size: 1.2em;
+        @media only screen and (min-width : 414px) and (max-width : 767) {
+        font-size: 1.5em; }
+        @media only screen and (min-width : 768px) and (max-width : 1023) {
+        font-size: 1.8em; }
+        @media only screen and (min-width : 1024px) {
+        font-size: 1.6em; }
+        .day-space {
+          padding: 0 .3em 0 .3em; } } } }
+ #theRestaurant {
+    height: 95vh;
+    padding: 4vh 0 0 5vw;
+    @media only screen and (min-width : 321px) and (max-width : 411px) {
+      height: 80vh; }
+    @media only screen and (min-width : 412px) and (max-width : 767px) {
+      height: 70vh; }
+    @media only screen and (min-width : 768px) and (max-width : 1023px) {
+      height: 55vh; }
+    @media only screen and (min-width : 1024px) {
+      height: 45em; }
+    .theRestaurantTitle {
+      text-align: center;
+      font-size: 2em;
+      padding: 0 0 3vh 0;
+      @media only screen and (min-width : 414px) and (max-width : 767px) {
+        font-size: 2.3em; }
+      @media only screen and (min-width : 768px) and (max-width : 1023px) {
+        font-size: 1.9em; }
+      @media only screen and (min-width : 1024px) {
+        font-size: 2.3em; }
+    }
+    .theRestaurantContent {
+      font-size: 1.2em;
+      @media only screen and (min-width : 414px) and (max-width : 767) {
+        font-size: 1.5em; }
+      @media only screen and (min-width : 768px) and (max-width : 1023) {
+        font-size: 1.8em; }
+      @media only screen and (min-width : 1024px) {
+        font-size: 1.6em; }
+    }
+  }
+}
+
+// Chef
+#chef {
+  height: 40em;
+  background-color: #232323;
+  font-family: 'Josefin Slab', serif;
+  #chef-content {
+    padding-top: 6em;
+    .chef-text1 {
+      color: white;
+      padding-left: 0;
+      h1 {
+        padding-bottom: 1em;
+      }
+      p {
+        font-size: 1.3em;
+        padding-top: .5em;
+      }
+    }
+    .chef-image1 {
+      padding-left: 4em;
     }
   }
 }
